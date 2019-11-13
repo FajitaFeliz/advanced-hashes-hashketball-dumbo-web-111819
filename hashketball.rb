@@ -79,19 +79,6 @@ def player_numbers(input_team)
   return_arr
 end
 
-# def player_stats(input_name)
-#   # takes in an argument of a player's name and returns a hash of that player's stats
-#   return_hash = {}
-#   game_hash.each do |home_away, keys|
-#     keys[:players].each do |player_hash|
-#       if keys[player_hash][:name] == input_name do
-#         return_hash = player_hash
-#         end
-#       end
-#     end
-#   end
-# end
-
 def player_stats(player_name)
   return_hash = {}
   game_hash.each do |home_away, keys|
@@ -106,4 +93,5 @@ end
 
 def big_shoe_rebounds
   # return the number of rebounds associated with the player that has the largest shoe size (more in Instructions)
+  
 end
