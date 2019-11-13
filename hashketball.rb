@@ -87,6 +87,7 @@ def player_stats(input_name)
       if :name == input_name do
         return_hash = player_hash
       end
+      end
     end
   end
 end
