@@ -28,8 +28,8 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do |home_away, big_keys|
-    big_keys[:players].each do |player_hash|
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player_hash|
       if player_hash[:player_name] == player_name
         return player_hash[:points]
       end
@@ -38,8 +38,8 @@ def num_points_scored(player_name)
 end
 
 def shoe_size(player_name)
-  game_hash.each do |home_away, big_keys|
-    big_keys[:players].each do |player_hash|
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player_hash|
       if player_hash[:player_name] == player_name
         return player_hash[:shoe]
       end
@@ -48,24 +48,26 @@ def shoe_size(player_name)
 end
 
 def team_colors(input_name)
-  game_hash.each do |home_away, big_keys|
-    if big_keys[:team_name] == input_name
-      return big_keys[:colors]
+  game_hash.each do |home_away, keys|
+    if keys[:team_name] == input_name
+      return keys[:colors]
     end
   end
 end
 
 def team_names
   return_arr = []    
-  game_hash.each do |home_away, big_keys|
-    return_arr << big_keys[:team_name]
+  game_hash.each do |home_away, keys|
+    return_arr << keys[:team_name]
   end
   return_arr
 end
 
-def player_numbers
-  # takes in an argument of a team name and returns an Array of the jersey numbers for that team
-end
+# def player_numbers(team_name)
+#   # takes in an argument of a team name and returns an Array of the jersey numbers for that team
+#   return_arr = []
+#   game_hash.each do |home_away, keys
+# end
 
 def player_stats
   # takes in an argument of a player's name and returns a hash of that player's stats
