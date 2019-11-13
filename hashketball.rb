@@ -106,6 +106,7 @@ def player_stats(player_name)
     if key == :name do |key|
       delete(key)
     end
+    end
   end
   final_hash
 end
