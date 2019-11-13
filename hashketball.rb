@@ -104,7 +104,7 @@ def player_stats(player_name)
   return_hash.each do |key, value|
     if key == ":name" do |key|
       delete(key)
-    end
+      end
     end
   end
   return_hash
