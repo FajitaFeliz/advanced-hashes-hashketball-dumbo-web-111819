@@ -86,7 +86,7 @@ def player_stats(input_name)
     keys[:players].each do |player_hash|
       if keys[player_hash][:name] == input_name do
         return_hash = player_hash
-      end
+        end
       end
     end
   end
