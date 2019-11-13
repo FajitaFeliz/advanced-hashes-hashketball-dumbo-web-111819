@@ -70,7 +70,7 @@ def player_numbers(input_team)
       keys.each do |attributes, data|
         if attributes == :players
           data.each do |player|
-            nums << player[:number]
+            return_arr << player[:number]
           end
         end
       end
