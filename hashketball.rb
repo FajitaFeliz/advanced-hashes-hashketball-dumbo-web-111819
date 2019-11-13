@@ -56,7 +56,6 @@ def team_colors(input_name)
 end
 
 def team_names
-  # operates on the game Hash to return an Array of the team names
   return_arr = []    
   game_hash.each do |home_away, big_keys|
     return_arr << big_keys[:team_name]
