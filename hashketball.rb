@@ -51,7 +51,7 @@ def team_colors(input_name)
   # takes in an argument of the team name and returns an Array of that team's colors
   game_hash.each do |home_away, big_keys|
     if big_keys[:team_name] == input_name
-      return big_keys[:colors].capitalize
+      return big_keys[:colors]
     end
   end
 end
