@@ -57,6 +57,8 @@ end
 
 def team_names
   # operates on the game Hash to return an Array of the team names
+    game_hash.each do |home_away, big_keys|
+      if big_keys[
 end
 
 def player_numbers
