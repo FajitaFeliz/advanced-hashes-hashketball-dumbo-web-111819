@@ -18,7 +18,7 @@ def game_hash
     :colors => ['turquoise', 'purple'],
     :players => [
       {player_name: 'Jeff Adrien', number: 4, shoe: 18, points: 10, rebounds: 1, assists: 1, steals: 2, blocks: 7, slam_dunks: 2},
-      {player_name: 'Bismak Biyombo', number: 0, shoe: 16, points: 12, rebounds: 4, assists: 7, steals: 7, blocks: 15, slam_dunks: 10},
+      {player_name: 'Bismack Biyombo', number: 0, shoe: 16, points: 12, rebounds: 4, assists: 7, steals: 7, blocks: 15, slam_dunks: 10},
       {player_name: 'DeSagna Diop', number: 2, shoe: 14, points: 24, rebounds: 12, assists: 12, steals: 4, blocks: 5, slam_dunks: 5},
       {player_name: 'Ben Gordon', number: 8, shoe: 15, points: 33, rebounds: 3, assists: 2, steals: 1, blocks: 1, slam_dunks: 0},
       {player_name: 'Brendan Haywood', number: 33, shoe: 15, points: 6, rebounds: 12, assists: 12, steals: 22, blocks: 5, slam_dunks: 12}
@@ -37,34 +37,34 @@ end
 #   end
 # end
 
-# def num_points_scored(players_name)
-#   game_hash.each do |home_away, keys|
-#     keys.each do |team_color_players, player_hash|
-#       if team_color_players == :players
-#         player_hash.each do |player|
-#           binding.pry
-#           # if player[:player_name] == players_name
-#           #   return player[:points]
-#           # end
-#         end
-#       end
-#     end
-#   end
-# end
+def num_points_scored(players_name)
+  game_hash.each do |home_away, keys|
+    keys.each do |team_color_players, player_hash|
+      if team_color_players == :players
+        player_hash.each do |player|
+          binding.pry
+          # if player[:player_name] == players_name
+          #   return player[:points]
+          # end
+        end
+      end
+    end
+  end
+end
 
-# def num_points_scored(players_name)
-#   game_hash.each do |place, team|
-#     team.each do |attribute, data|
-#       if attribute == :players
-#         data.each do |player|
-#           if player [:player_name] == players_name
-#             return player [:points]
-#           end
-#         end
-#       end
-#     end
-#   end
-# end
+def num_points_scored(players_name)
+  game_hash.each do |place, team|
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          if player [:player_name] == players_name
+            return player [:points]
+          end
+        end
+      end
+    end
+  end
+end
 
 def shoe_size
   # takes in an argument of a player's name and returns the shoe size for that player (more in instructions)
