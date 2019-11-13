@@ -38,7 +38,6 @@ def num_points_scored(player_name)
 end
 
 def shoe_size(player_name)
-  # takes in an argument of a player's name and returns the shoe size for that player (more in instructions)
   game_hash.each do |home_away, big_keys|
     big_keys[:players].each do |player_hash|
       if player_hash[:player_name] == player_name
