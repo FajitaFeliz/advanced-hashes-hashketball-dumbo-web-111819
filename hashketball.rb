@@ -61,6 +61,7 @@ def team_names
   game_hash.each do |home_away, big_keys|
     return_arr << big_keys[:team_name]
   end
+  return_arr
 end
 
 def player_numbers
