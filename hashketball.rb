@@ -37,34 +37,34 @@ end
 #   end
 # end
 
-# def num_points_scored(players_name)
-#   game_hash.each do |home_away, keys|
-#     keys.each do |team_color_players, player_hash|
-#       if team_color_players == :players
-#         player_hash.each do |player|
-#           binding.pry
-#           # if player[:player_name] == players_name
-#           #   return player[:points]
-#           # end
-#         end
-#       end
-#     end
-#   end
-# end
-
 def num_points_scored(players_name)
-  game_hash.each do |place, team|
-    team.each do |attribute, data|
-      if attribute == :players
-        data.each do |player|
-          if player [:player_name] == players_name
-            return player [:points]
-          end
+  game_hash.each do |home_away, keys|
+    keys.each do |team_color_players, player_hash|
+      if team_color_players == :players
+        player_hash.each do |player|
+          binding.pry
+          # if player[:player_name] == players_name
+          #   return player[:points]
+          # end
         end
       end
     end
   end
 end
+
+# def num_points_scored(players_name)
+#   game_hash.each do |place, team|
+#     team.each do |attribute, data|
+#       if attribute == :players
+#         data.each do |player|
+#           if player [:player_name] == players_name
+#             return player [:points]
+#           end
+#         end
+#       end
+#     end
+#   end
+# end
 
 def shoe_size
   # takes in an argument of a player's name and returns the shoe size for that player (more in instructions)
