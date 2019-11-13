@@ -42,10 +42,9 @@ def num_points_scored(players_name)
     keys.each do |team_color_players, player_hash|
       if team_color_players == :players
         player_hash.each do |player|
-          binding.pry
-          # if player[:player_name] == players_name
-          #   return player[:points]
-          # end
+          if player[:player_name] == players_name
+            return player[:points]
+          end
         end
       end
     end
