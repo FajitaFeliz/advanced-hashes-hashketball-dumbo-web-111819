@@ -69,7 +69,7 @@ def player_numbers(input_team)
   game_hash.each do |home_away, keys|
     if keys[:team_name] == input_team
       keys[:players].each do
-        return_arr << :number
+        return_arr << [:number]
       end
     end
   end
