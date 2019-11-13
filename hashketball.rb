@@ -63,11 +63,11 @@ def team_names
   return_arr
 end
 
-# def player_numbers(team_name)
-#   # takes in an argument of a team name and returns an Array of the jersey numbers for that team
-#   return_arr = []
-#   game_hash.each do |home_away, keys
-# end
+def player_numbers(team_name)
+  # takes in an argument of a team name and returns an Array of the jersey numbers for that team
+  return_arr = []
+  game_hash.each do |home_away, keys
+end
 
 def player_stats
   # takes in an argument of a player's name and returns a hash of that player's stats
