@@ -64,13 +64,15 @@ def team_names
 end
 
 def player_numbers(input_team)
-  # takes in an argument of a team name and returns an Array of the jersey numbers for that team
   return_arr = []
   game_hash.each do |home_away, keys|
     if keys[:team_name] == input_team
-      keys[:players].each do
-        binding.pry
-        # return_arr << [:number]
+      keys.each do |attributes, data|
+        if attributes == :players
+          data.each do |player|
+            nums << player[:number]
+          end
+        end
       end
     end
   end
