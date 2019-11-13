@@ -104,7 +104,7 @@ def player_stats(player_name)
   final_hash = {}
   return_hash.each do |key, value|
     if key != :name
-      final_hash = return_hash
+      final_hash << return_hash
     end
   end
   final_hash
