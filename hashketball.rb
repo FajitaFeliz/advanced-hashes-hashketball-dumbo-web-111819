@@ -103,7 +103,6 @@ def player_stats(player_name)
   end
   return_hash.each do |key, value|
     if key == ":name" delete(key)
-      end
     end
   end
   return_hash
