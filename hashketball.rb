@@ -101,14 +101,13 @@ def player_stats(player_name)
       end
     end
   end
-  final_hash = {}
   return_hash.each do |key, value|
-    if key == :name do |key|
+    if key == ":name" do |key|
       delete(key)
     end
     end
   end
-  final_hash
+  return_hash
 end
 
 def big_shoe_rebounds
